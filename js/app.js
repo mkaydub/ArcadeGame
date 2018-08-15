@@ -31,25 +31,25 @@ class Player {
     this.sprite = 'images/char-cat-girl.png';
     this.x = 0;
     this.y = 0;
-
-    //UPDATE PLAYER POSITION METHOD
-    Player.prototype.update = function() {
-
-    };
-
-    //RENDER PLAYER IMAGE METHOD
-    Player.prototype.render = function() {
-      ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
-    };
-
-    //HANDLEINPUT METHOD
   }
+  //UPDATE PLAYER POSITION METHOD
+  //update() {
+
+  //  }
+
+  //RENDER PLAYER IMAGE METHOD
+  render() {
+    ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+  };
+
+  //HANDLEINPUT METHOD
+  //    handleInput();
 }
 
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
-
+var player = new Player();
 
 
 // This listens for key presses and sends the keys to your
