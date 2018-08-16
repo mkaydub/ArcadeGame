@@ -36,6 +36,8 @@ class Player {
     this.sprite = 'images/char-cat-girl.png';
     this.x = 200;
     this.y = 420;
+    this.horiz = 83;
+    this.vert = 101;
   }
   //UPDATE PLAYER POSITION METHOD
   //update() {
