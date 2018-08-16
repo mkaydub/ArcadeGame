@@ -44,13 +44,17 @@ class Player {
   };
 
   //HANDLEINPUT METHOD
-  //    handleInput();
+
 }
 
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
 const player = new Player();
+const enemy1 = new Enemy(1, 50, 100);
+const enemy2 = new Enemy(2, 100, 400);
+const allEnemies = [];
+allEnemies.push(enemy1, enemy2);
 
 
 // This listens for key presses and sends the keys to your
