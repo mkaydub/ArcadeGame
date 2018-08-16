@@ -30,8 +30,8 @@ Enemy.prototype.render = function() {
 class Player {
   constructor() {
     this.sprite = 'images/char-cat-girl.png';
-    this.x = 0;
-    this.y = 0;
+    this.x = 200;
+    this.y = 420;
   }
   //UPDATE PLAYER POSITION METHOD
   //update() {
