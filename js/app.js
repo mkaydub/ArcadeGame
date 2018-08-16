@@ -59,29 +59,28 @@ class Player {
         }
         break;
       case 'up':
-        if (this.y > this.vert) {
+        if (this.y > 33) {
           this.y -= this.vert;
         }
         break;
       case 'right':
-        if (this.x < this.horiz) {
+        if (this.x < 404) {
           this.x += this.horiz;
         }
         break;
       case 'down':
-        if (this.y < this.vert) {
+        if (this.y < 332) {
           this.y += this.vert;
         }
         break;
     }
-
   }
 }
 
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
-const player = new Player();
+const player = new Player(202, 405);
 const enemy1 = new Enemy(20, 70, 100);
 const enemy2 = new Enemy(50, 200, 200);
 const allEnemies = [];
