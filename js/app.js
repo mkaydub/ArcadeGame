@@ -7,8 +7,9 @@ var Enemy = function(x, y, speed) {
   // a helper we've provided to easily load images
   this.sprite = 'images/enemy-bug.png';
   this.x = x;
-  this.y = y;
+  this.y = y + 55;
   this.speed = speed;
+  this.horiz = 101;
 };
 
 // Update the enemy's position, required method for game
@@ -35,25 +36,30 @@ class Player {
   constructor(x, y) {
     this.sprite = 'images/char-cat-girl.png';
     this.x = x;
-    this.y = y;
+    this.y = y - 18;
     this.horiz = 101;
     this.vert = 83;
   }
   //UPDATE PLAYER POSITION METHOD
   update() {
-    if (this.y === 55) {
-      this.reset();
+    for (let enemy of allEnemies) {
+      if (this.y === enemy.y) {
+        console.log('enemy hit');
+      }
+      if (this.y < 30) {
+        console.log('winner');
+      }
     }
-  };
+  }
   //RENDER PLAYER IMAGE METHOD
   render() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
-  };
+  }
 
   reset() {
     this.x = 202;
     this.y = 405;
-  };
+  }
 
   //HANDLEINPUT METHOD
 
@@ -87,8 +93,8 @@ class Player {
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
 const player = new Player(202, 405);
-const enemy1 = new Enemy(20, 70, 100);
-const enemy2 = new Enemy(50, 200, 200);
+const enemy1 = new Enemy(20, 0, 100);
+const enemy2 = new Enemy(50, 83, 200);
 const allEnemies = [];
 allEnemies.push(enemy1, enemy2);
 
