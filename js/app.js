@@ -32,21 +32,27 @@ Enemy.prototype.render = function() {
 // This class requires an update(), render() and
 // a handleInput() method.
 class Player {
-  constructor() {
+  constructor(x, y) {
     this.sprite = 'images/char-cat-girl.png';
-    this.x = 200;
-    this.y = 420;
-    this.horiz = 83;
-    this.vert = 101;
+    this.x = x;
+    this.y = y;
+    this.horiz = 101;
+    this.vert = 83;
   }
   //UPDATE PLAYER POSITION METHOD
-  //update() {
-
-  //  }
-
+  update() {
+    if (this.y === 55) {
+      this.reset();
+    }
+  };
   //RENDER PLAYER IMAGE METHOD
   render() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+  };
+
+  reset() {
+    this.x = 202;
+    this.y = 405;
   };
 
   //HANDLEINPUT METHOD
