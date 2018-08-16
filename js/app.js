@@ -51,6 +51,31 @@ class Player {
 
   //HANDLEINPUT METHOD
 
+  handleInput(keys) {
+    switch (keys) {
+      case 'left':
+        if (this.x > 0) {
+          this.x -= this.horiz;
+        }
+        break;
+      case 'up':
+        if (this.y > this.vert) {
+          this.y -= this.vert;
+        }
+        break;
+      case 'right':
+        if (this.x < this.horiz) {
+          this.x += this.horiz;
+        }
+        break;
+      case 'down':
+        if (this.y < this.vert) {
+          this.y += this.vert;
+        }
+        break;
+    }
+
+  }
 }
 
 // Now instantiate your objects.
