@@ -258,3 +258,8 @@ function resetGame() {
   resetStars();
   resetClock();
 }
+
+function toggleScore() {
+  const score = document.querySelector('.scoreBackground');
+  score.classList.toggle('hide');
+}
