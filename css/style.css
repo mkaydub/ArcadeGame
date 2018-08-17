@@ -71,3 +71,76 @@ header {
   display: inline;
   cursor: pointer;
 }
+
+/* styles for final scoreCard */
+
+.scoreBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
+}
+
+.scoreBody {
+  position: relative;
+  width: 400px;
+  top: 50%;
+  left: 50%;
+  background-color: rgba(38, 37, 46, 0.89);
+  transform: translate(-50%, -90%);
+}
+
+.scoreHeading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem;
+  border-bottom: 1px solid gray;
+  color: #fff;
+}
+
+.scoreTitle {
+  font-family: 'Oswald', sans-serif;
+}
+
+.xOut {
+  font-weight: bold;
+  font-size: 45px;
+  cursor: pointer;
+}
+
+.scoreStats {
+  font-family: "Oswald", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid gray;
+  color: #fff;
+}
+
+.scoreButtons {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+}
+
+.scoreButton {
+  background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
+  width: 60px;
+  height: 30px;
+  border-radius: 10px;
+  border-color: rgb(109, 52, 159);
+  cursor: pointer;
+  font-family: 'Oswald', sans-serif;
+  font-size: 18px;
+  color: #fff;
+}
+
+.hide {
+  display: none;
+}
