@@ -1,4 +1,13 @@
+// scorePanel and final scoreCard variables
+let moves = 0;
+let second = 0;
+let minute = 0;
+let interval;
+let timerRunning = false;
+let timer = document.querySelector('.timer');
 let starsArray = document.querySelectorAll(".stars li");
+
+
 // Enemies our player must avoid
 var Enemy = function(x, y, speed) {
   // Variables applied to each of our instances go here,
