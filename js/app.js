@@ -54,7 +54,8 @@ class Player {
   update() {
     for (let enemy of allEnemies) {
       if (this.y === enemy.y && (enemy.x + enemy.horiz / 2.25 > this.x && enemy.x < this.x + enemy.horiz / 2.25)) {
-        scoreStarsChange();
+        resetStars();
+        resetMoves();
         this.resetpos();
       }
     }
