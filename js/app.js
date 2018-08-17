@@ -44,21 +44,25 @@ class Player {
   update() {
     for (let enemy of allEnemies) {
       if (this.y === enemy.y && (enemy.x + enemy.horiz / 2.25 > this.x && enemy.x < this.x + enemy.horiz / 2.25)) {
-        this.reset();
-      }
-      if (this.y === -28) {
-        setTimeout(() => {
-          this.reset();
-        }, 600);
+        scoreStarsChange();
+        this.resetpos();
       }
     }
+    if (this.y === -28) {
+      addMove();
+      setTimeout(() => {
+        this.resetpos();
+        scoreStarsChange();
+      }, 10);
+    }
   }
+
   //RENDER PLAYER IMAGE METHOD
   render() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
   }
 
-  reset() {
+  resetpos() {
     this.x = 202;
     this.y = 387;
   }
