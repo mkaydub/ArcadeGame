@@ -126,4 +126,22 @@ document.addEventListener('keyup', function(e) {
   };
 
   player.handleInput(allowedKeys[e.keyCode]);
+  startTimer();
 });
+
+let restart = document.querySelector('.restart');
+restart.addEventListener('click', () => {
+  window.location.reload(true);
+});
+
+function addMove() {
+  moves++;
+  const movesText = document.querySelector('.moves');
+  movesText.innerHTML = moves;
+}
+
+function resetGame() {
+  resetMoves();
+  resetStars();
+  resetClock();
+}
