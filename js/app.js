@@ -18,7 +18,7 @@ var Enemy = function(x, y, speed) {
   this.sprite = 'images/enemy-bug.png';
   this.x = x;
   this.y = y + 55;
-  this.speed = speed;
+  this.speed = Math.floor(Math.random() * 350 + 50);
   this.horiz = 101;
 };
 
