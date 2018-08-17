@@ -36,18 +36,20 @@ class Player {
   constructor(x, y) {
     this.sprite = 'images/char-cat-girl.png';
     this.x = x;
-    this.y = y - 18;
+    this.y = y;
     this.horiz = 101;
     this.vert = 83;
   }
   //UPDATE PLAYER POSITION METHOD
   update() {
     for (let enemy of allEnemies) {
-      if (this.y === enemy.y) {
-        console.log('enemy hit');
+      if (this.y === enemy.y && (enemy.x + enemy.horiz / 2.25 > this.x && enemy.x < this.x + enemy.horiz / 2.25)) {
+        this.reset();
       }
-      if (this.y < 30) {
-        console.log('winner');
+      if (this.y === -28) {
+        setTimeout(() => {
+          this.reset();
+        }, 600);
       }
     }
   }
@@ -58,7 +60,7 @@ class Player {
 
   reset() {
     this.x = 202;
-    this.y = 405;
+    this.y = 387;
   }
 
   //HANDLEINPUT METHOD
@@ -92,7 +94,7 @@ class Player {
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
-const player = new Player(202, 405);
+const player = new Player(202, 387);
 const enemy1 = new Enemy(20, 0, 100);
 const enemy2 = new Enemy(50, 83, 200);
 const allEnemies = [];
