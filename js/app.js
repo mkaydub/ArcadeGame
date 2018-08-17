@@ -235,9 +235,16 @@ document.addEventListener('keyup', function(e) {
   startTimer();
 });
 
+document.addEventListener('keyup', (function(event) {
+  if (event.keyCode == 27) {
+    toggleScore();
+  };
+}));
+
 let restart = document.querySelector('.restart');
 restart.addEventListener('click', () => {
   window.location.reload(true);
+  resetClock();
 });
 
 function addMove() {
