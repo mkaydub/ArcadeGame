@@ -105,6 +105,87 @@ class Player {
   }
 }
 
+
+
+//reset moves to zero
+function resetMoves() {
+  moves = 0;
+  document.querySelector('.moves').innerHTML = moves;
+}
+
+function scoreStarsChange() {
+  if (moves === 1) {
+    //color in one star when player makes it to the water
+    starsArray[0].getElementsByTagName('i')[0].classList.remove("fa-star-o");
+    starsArray[0].getElementsByTagName('i')[0].classList.add("fa-star");
+  } else if (moves === 2) {
+    //color in 2 stars when player makes it to the water 2 times
+    starsArray[0].getElementsByTagName('i')[0].classList.remove("fa-star-o");
+    starsArray[0].getElementsByTagName('i')[0].classList.add("fa-star");
+    starsArray[1].getElementsByTagName('i')[0].classList.remove("fa-star-o");
+    starsArray[1].getElementsByTagName('i')[0].classList.add("fa-star");
+  } else if (moves === 3) {
+    //color in 3 stars when player makes it to the water 3 times
+    starsArray[2].getElementsByTagName('i')[0].classList.remove("fa-star-o");
+    starsArray[2].getElementsByTagName('i')[0].classList.add("fa-star");
+
+  } else if (moves === 4) {
+    //color in 4 stars when player makes it to the water 4 times
+    starsArray[3].getElementsByTagName('i')[0].classList.remove("fa-star-o");
+    starsArray[3].getElementsByTagName('i')[0].classList.add("fa-star");
+  } else if (moves === 5) {
+    //color in 5 stars when player makes it to the water 5 times
+    starsArray[4].getElementsByTagName('i')[0].classList.remove("fa-star-o");
+    starsArray[4].getElementsByTagName('i')[0].classList.add("fa-star");
+  }
+}
+
+
+function resetStars() {
+  starsArray[0].getElementsByTagName('i')[0].classList.remove("fa-star-o");
+  starsArray[0].getElementsByTagName('i')[0].classList.add("fa-star");
+  starsArray[1].getElementsByTagName('i')[0].classList.remove("fa-star-o");
+  starsArray[1].getElementsByTagName('i')[0].classList.add("fa-star");
+  starsArray[2].getElementsByTagName('i')[0].classList.remove("fa-star-o");
+  starsArray[2].getElementsByTagName('i')[0].classList.add("fa-star");
+}
+
+//start timer for score panel
+function startTimer() {
+  if (!timerRunning) {
+    timerRunning = true;
+    second = 0;
+    minute = 0;
+    interval = setInterval(function() {
+      second++;
+      timer.innerHTML = minute + " mins " + second + " secs";
+      if (second == 60) {
+        minute++;
+        second = 0;
+      }
+    }, 1000);
+  }
+}
+//stop timer
+
+function stopTimer() {
+  if (timerRunning) {
+    timerRunning = false;
+    clearInterval(interval);
+  }
+}
+//reset clock to zero
+
+function resetClock() {
+  stopTimer();
+  timerRunning = false;
+  second = 0;
+  minute = 0;
+  let timer = document.querySelector(".timer");
+  timer.innerHTML = "0 mins 0 secs";
+  clearInterval(interval);
+}
+
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
