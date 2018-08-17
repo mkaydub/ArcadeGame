@@ -127,28 +127,50 @@ function scoreStarsChange() {
     starsArray[1].getElementsByTagName('i')[0].classList.add("fa-star");
   } else if (moves === 3) {
     //color in 3 stars when player makes it to the water 3 times
+    starsArray[0].getElementsByTagName('i')[0].classList.remove("fa-star-o");
+    starsArray[0].getElementsByTagName('i')[0].classList.add("fa-star");
+    starsArray[1].getElementsByTagName('i')[0].classList.remove("fa-star-o");
+    starsArray[1].getElementsByTagName('i')[0].classList.add("fa-star");
     starsArray[2].getElementsByTagName('i')[0].classList.remove("fa-star-o");
     starsArray[2].getElementsByTagName('i')[0].classList.add("fa-star");
-
   } else if (moves === 4) {
     //color in 4 stars when player makes it to the water 4 times
+    starsArray[0].getElementsByTagName('i')[0].classList.remove("fa-star-o");
+    starsArray[0].getElementsByTagName('i')[0].classList.add("fa-star");
+    starsArray[1].getElementsByTagName('i')[0].classList.remove("fa-star-o");
+    starsArray[1].getElementsByTagName('i')[0].classList.add("fa-star");
+    starsArray[2].getElementsByTagName('i')[0].classList.remove("fa-star-o");
+    starsArray[2].getElementsByTagName('i')[0].classList.add("fa-star");
     starsArray[3].getElementsByTagName('i')[0].classList.remove("fa-star-o");
     starsArray[3].getElementsByTagName('i')[0].classList.add("fa-star");
   } else if (moves === 5) {
     //color in 5 stars when player makes it to the water 5 times
+    starsArray[0].getElementsByTagName('i')[0].classList.remove("fa-star-o");
+    starsArray[0].getElementsByTagName('i')[0].classList.add("fa-star");
+    starsArray[1].getElementsByTagName('i')[0].classList.remove("fa-star-o");
+    starsArray[1].getElementsByTagName('i')[0].classList.add("fa-star");
+    starsArray[2].getElementsByTagName('i')[0].classList.remove("fa-star-o");
+    starsArray[2].getElementsByTagName('i')[0].classList.add("fa-star");
+    starsArray[3].getElementsByTagName('i')[0].classList.remove("fa-star-o");
+    starsArray[3].getElementsByTagName('i')[0].classList.add("fa-star");
     starsArray[4].getElementsByTagName('i')[0].classList.remove("fa-star-o");
     starsArray[4].getElementsByTagName('i')[0].classList.add("fa-star");
+    stopTimer();
   }
 }
 
-
+// resets all stars to 0 if collision occurs
 function resetStars() {
-  starsArray[0].getElementsByTagName('i')[0].classList.remove("fa-star-o");
-  starsArray[0].getElementsByTagName('i')[0].classList.add("fa-star");
-  starsArray[1].getElementsByTagName('i')[0].classList.remove("fa-star-o");
-  starsArray[1].getElementsByTagName('i')[0].classList.add("fa-star");
-  starsArray[2].getElementsByTagName('i')[0].classList.remove("fa-star-o");
-  starsArray[2].getElementsByTagName('i')[0].classList.add("fa-star");
+  starsArray[0].getElementsByTagName('i')[0].classList.remove("fa-star");
+  starsArray[0].getElementsByTagName('i')[0].classList.add("fa-star-o");
+  starsArray[1].getElementsByTagName('i')[0].classList.remove("fa-star");
+  starsArray[1].getElementsByTagName('i')[0].classList.add("fa-star-o");
+  starsArray[2].getElementsByTagName('i')[0].classList.remove("fa-star");
+  starsArray[2].getElementsByTagName('i')[0].classList.add("fa-star-o");
+  starsArray[3].getElementsByTagName('i')[0].classList.remove("fa-star");
+  starsArray[3].getElementsByTagName('i')[0].classList.add("fa-star-o");
+  starsArray[4].getElementsByTagName('i')[0].classList.remove("fa-star");
+  starsArray[4].getElementsByTagName('i')[0].classList.add("fa-star-o");
 }
 
 //start timer for score panel
