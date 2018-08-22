@@ -191,16 +191,16 @@ function startTimer() {
     }, 1000);
   }
 }
-//stop timer
 
+//stop timer
 function stopTimer() {
   if (timerRunning) {
     timerRunning = false;
     clearInterval(interval);
   }
 }
-//reset clock to zero
 
+//reset clock to zero
 function resetClock() {
   stopTimer();
   timerRunning = false;
