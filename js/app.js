@@ -54,12 +54,14 @@ class Player {
   update() {
     for (let enemy of allEnemies) {
       if (this.y === enemy.y && (enemy.x + enemy.horiz / 2.25 > this.x && enemy.x < this.x + enemy.horiz / 2.25)) {
+        //after collision, reset stars to 0 moves to 0, and reset position
         resetStars();
         resetMoves();
         this.resetpos();
       }
     }
     if (this.y === -28) {
+      //player has made it to the water
       addMove();
       setTimeout(() => {
         this.resetpos();
