@@ -6,19 +6,19 @@ let interval;
 let timerRunning = false;
 let timer = document.querySelector('.timer');
 let starsArray = document.querySelectorAll(".stars li");
-
+startScreen();
 
 // Enemies our player must avoid
-var Enemy = function(x, y, speed) {
+var Enemy = function(x, y) {
   // Variables applied to each of our instances go here,
   // we've provided one for you to get started
 
   // The image/sprite for our enemies, this uses
   // a helper we've provided to easily load images
-  this.sprite = 'images/enemy-bug.png';
+  this.sprite = 'images/enemy-pac-man.png';
   this.x = x;
   this.y = y + 55;
-  this.speed = Math.floor(Math.random() * 350 + 50);
+  this.speed = Math.floor((Math.random() * 400) + 40);
   this.horiz = 101;
 };
 
