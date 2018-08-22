@@ -144,7 +144,7 @@ function scoreStarsChange() {
     starsArray[3].getElementsByTagName('i')[0].classList.remove("fa-star-o");
     starsArray[3].getElementsByTagName('i')[0].classList.add("fa-star");
   } else if (moves === 5) {
-    //color in 5 stars when player makes it to the water 5 times
+    //color in 5 stars when player makes it to the water 5 times & win the game
     starsArray[0].getElementsByTagName('i')[0].classList.remove("fa-star-o");
     starsArray[0].getElementsByTagName('i')[0].classList.add("fa-star");
     starsArray[1].getElementsByTagName('i')[0].classList.remove("fa-star-o");
