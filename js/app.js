@@ -212,10 +212,10 @@ function resetClock() {
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
 const player = new Player(202, 387);
-const enemy1 = new Enemy(0, 0);
-const enemy2 = new Enemy(-5, 83);
+const enemy1 = new Enemy(-110, 83);
+const enemy2 = new Enemy(-45, 83);
 const enemy3 = new Enemy(-10, 166);
-const enemy4 = new Enemy(0, 0);
+const enemy4 = new Enemy(-30, 0);
 const allEnemies = [];
 allEnemies.push(enemy1, enemy2, enemy3, enemy4);
 
