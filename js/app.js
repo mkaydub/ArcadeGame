@@ -231,34 +231,75 @@ document.addEventListener('keyup', function(e) {
   };
 
   player.handleInput(allowedKeys[e.keyCode]);
-  startTimer();
 });
 
+
 document.addEventListener('keyup', (function(event) {
-  if (event.keyCode == 27) {
-    toggleScore();
-  };
+  //When player hits any arrow key, start timer
+  if (event.keyCode == 38 || event.keyCode == 37 || event.keyCode == 39 || event.keyCode == 40) {
+    startTimer();
+  }
+  //When player hits esc key, toggle the startscreen
+  else if (event.keyCode == 27) {
+    startScreen();
+  }
 }));
 
+//when player clicks any restart button, reload and reset game
 let restart = document.querySelector('.restart');
 restart.addEventListener('click', () => {
   window.location.reload(true);
-  resetClock();
+  resetGame();
 });
 
+let winRestart = document.querySelector('.winRestart');
+winRestart.addEventListener('click', () => {
+  window.location.reload(true);
+  resetGame();
+});
+
+//when game is won, write stats on final screen
+function scoreCardStats() {
+
+  const timeStat = document.querySelector('.scoreTime');
+  const clockTime = document.querySelector('.timer').innerHTML;
+  const starsStat = document.querySelector('.scoreStars');
+  const starCount = document.querySelector('.stars').innerHTML;
+
+  timeStat.innerHTML = `Time : ${clockTime}`;
+  starsStat.innerHTML = `${starCount}`;
+};
+
+//add stars to score board when player makes it to water
 function addMove() {
   moves++;
   const movesText = document.querySelector('.moves');
   movesText.innerHTML = moves;
 }
 
+//reset game
 function resetGame() {
   resetMoves();
   resetStars();
   resetClock();
 }
 
-function toggleScore() {
-  const score = document.querySelector('.scoreBackground');
+//toggle start screen
+function startScreen() {
+  const score = document.querySelector('.startScreen');
+  score.classList.toggle('hide');
+}
+
+// When game is won, the score screen comes up,timer stops,
+// & score stats are revealed
+function winGame() {
+  toggleWin();
+  scoreCardStats();
+  stopTimer();
+}
+
+//toggle win screen
+function toggleWin() {
+  const score = document.querySelector('.winBackground');
   score.classList.toggle('hide');
 }
