@@ -81,7 +81,8 @@ class Player {
   }
 
   //HANDLEINPUT METHOD
-
+  //keep player within boundaries, allow player to move 83 pixels vertically
+  //101 pixels horizontally
   handleInput(keys) {
     switch (keys) {
       case 'left':
