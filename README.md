@@ -1,6 +1,41 @@
-frontend-nanodegree-arcade-game
-===============================
+# Arcade Game Clone - Udacity Project 3
 
-Students should use this [rubric](https://review.udacity.com/#!/projects/2696458597/rubric) for self-checking their submission. Make sure the functions you write are **object-oriented** - either class functions (like Player and Enemy) or class prototype functions such as Enemy.prototype.checkCollisions, and that the keyword 'this' is used appropriately within your class and class prototype functions to refer to the object the function is called upon. Also be sure that the **readme.md** file is updated with your instructions on both how to 1. Run and 2. Play your arcade game.
+Udacity students were tasked to create a "Classic Arcade Game" or more specifically a "Frogger" Clone using Object Oriented JavaScript. 
 
-For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
+The projects are to be evaluated with the rubric as explained here: https://review.udacity.com/#!/projects/2696458597/rubric
+
+## Getting Started
+
+These instructions will get you a copy of the project up and running on your local machine for development, testing, and gaming purposes.
+
+### Installing
+
+* Download this repository
+* Extract the zip file
+* Open the index.html file
+* Play!
+
+or...
+Play here:
+https://mkaydub.github.io/ArcadeGame/
+
+
+## Playing the game
+
+How to play:
+* Use the arrow keys on your keyboard in order to move your player from block to block.
+* Your objective is to make it to the water and swim!
+* If you make it to the water 5 times without being hit by an enemy, you win the game!
+* If you are hit by an enemy your star count will return to zero, but your timer will not!
+* Hit escape (esc) on your keyboard on the start screen to start the game!
+
+## Contributing
+
+Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+
+## Acknowledgments
+
+* For help with animating the winning modal https://robots.thoughtbot.com/css-animation-for-beginners
+* Referenced when stuck : https://matthewcranford.com/arcade-game-walkthrough-part-1-starter-code-breakdown/ Thanks Matt!
+* Udacity assets for game (I edited)
+* Pac man assets
