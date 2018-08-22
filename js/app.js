@@ -1,4 +1,4 @@
-// scorePanel and final scoreCard variables
+// scorePanel and winning modal variables
 let moves = 0;
 let second = 0;
 let minute = 0;
