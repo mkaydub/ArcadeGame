@@ -72,7 +72,7 @@ class Player {
   render() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
   }
-
+  //reset position after collision
   resetpos() {
     this.x = 202;
     this.y = 387;
