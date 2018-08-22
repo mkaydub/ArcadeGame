@@ -6,35 +6,35 @@ html, body {
   width: 100%;
   height: 100%;
   margin: 0 auto;
-  font-family: 'Oswald' sans-serif;
+  font-family: 'Work Sans' sans-serif;
   font-size: 18px;
+  text-align: center;
 }
 
 body {
   background: #ffffff;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Work Sans', sans-serif;
   font-size: 18px;
   text-align: center;
 }
 
 h1 {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Work Sans', sans-serif;
   font-weight: 300;
-  font-size: 20px;
-  padding-top: 5px;
   text-align: center;
 }
 
 h3 {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Work Sans', sans-serif;
   padding-top: 0px;
+  text-align: center;
 }
 
 h2 {
-  font-family: 'Petit Formal Script', sans-serif;
+  font-family: 'Megrim', sans-serif;
   color: #28282f;
   text-align: center;
-  font-size: 34px;
+  font-size: 44px;
 }
 
 header {
@@ -42,8 +42,13 @@ header {
   margin: 0 auto;
 }
 
+li {
+  display: inline;
+}
+
 #container {
   align-content: center;
+  text-align: center;
 }
 
 /*
@@ -64,7 +69,17 @@ header {
 
 .score-panel .stars li {
   list-style: none;
-  display: inline-block;
+  display: inline;
+}
+
+.scoreStars {
+  list-style: none;
+  display: inline;
+}
+
+.starCount {
+  list-style: none;
+  display: inline;
 }
 
 .score-panel .restart {
@@ -74,7 +89,7 @@ header {
 
 /* styles for final scoreCard */
 
-.scoreBackground {
+.startScreen {
   position: absolute;
   top: 0;
   left: 0;
@@ -82,65 +97,131 @@ header {
   right: 0;
   height: 100%;
   width: 100%;
-  background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
+  background: linear-gradient(190deg, #2d9e1e 0%, #2850e1 100%);
+  text-align: center;
 }
 
-.scoreBody {
+.sSBody {
   position: relative;
-  width: 400px;
+  width: 600px;
   top: 50%;
   left: 50%;
-  background-color: rgba(38, 37, 46, 0.89);
-  transform: translate(-50%, -90%);
+  background-color: rgba(255, 255, 255, 0.4);
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+  box-shadow: 5px 6px rgba(255, 255, 255, 0.8);
 }
 
-.scoreHeading {
+.sSHeading {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 0 1.5rem;
-  border-bottom: 1px solid gray;
   color: #fff;
+  text-align: center;
+  margin: 0 auto;
 }
 
-.scoreTitle {
-  font-family: 'Oswald', sans-serif;
+.title {
+  font-family: 'Megrim', sans-serif;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 25px;
+  padding-bottom: 20px;
+  font-size: 55px;
+  font-weight: 400;
+  background-image: -webkit-linear-gradient(92deg, #2850e1, #2d9e1e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: hue 60s infinite linear;
 }
 
-.xOut {
-  font-weight: bold;
-  font-size: 45px;
-  cursor: pointer;
-}
-
-.scoreStats {
-  font-family: "Oswald", sans-serif;
+.rules {
+  font-family: "Work Sans", sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1rem;
-  border-bottom: 1px solid gray;
-  color: #fff;
-}
-
-.scoreButtons {
-  display: flex;
-  justify-content: space-around;
-  padding: 1rem;
-}
-
-.scoreButton {
-  background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
-  width: 60px;
-  height: 30px;
-  border-radius: 10px;
-  border-color: rgb(109, 52, 159);
-  cursor: pointer;
-  font-family: 'Oswald', sans-serif;
-  font-size: 18px;
+  padding: .5rem;
   color: #fff;
 }
 
 .hide {
   display: none;
+}
+
+.winBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(190deg, #2850e1 0%, #2d9e1e 100%);
+  text-align: center;
+}
+
+.winRestart {
+  cursor: pointer;
+}
+
+.winBody {
+  position: relative;
+  width: 600px;
+  top: 50%;
+  left: 50%;
+  background-color: rgba(255, 255, 255, 0.4);
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+  box-shadow: 5px 6px rgba(255, 255, 255, 0.8);
+}
+
+.winHeading {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.winTitle {
+  font-family: 'Megrim', sans-serif;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 15px;
+  font-size: 45px;
+  font-weight: 400;
+  background-image: -webkit-linear-gradient(92deg, #2850e1, #2d9e1e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: hue 60s infinite linear;
+}
+
+.winStats {
+  font-family: "Work Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  color: #fff;
+}
+
+/* Animation for congratulations
+with the help of https://robots.thoughtbot.com/css-animation-for-beginners
+*/
+
+.animate {
+  animation: bounceIn 2s;
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.2);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
 }
