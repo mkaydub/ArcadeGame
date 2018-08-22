@@ -154,7 +154,7 @@ function scoreStarsChange() {
     starsArray[3].getElementsByTagName('i')[0].classList.add("fa-star");
     starsArray[4].getElementsByTagName('i')[0].classList.remove("fa-star-o");
     starsArray[4].getElementsByTagName('i')[0].classList.add("fa-star");
-    stopTimer();
+    winGame();
   }
 }
 
