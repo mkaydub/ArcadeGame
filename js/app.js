@@ -106,14 +106,13 @@ class Player {
   }
 }
 
-
-
 //reset moves to zero
 function resetMoves() {
   moves = 0;
   document.querySelector('.moves').innerHTML = moves;
 }
 
+//change showing stars based on how many times player has made it to water.
 function scoreStarsChange() {
   if (moves === 1) {
     //color in one star when player makes it to the water
